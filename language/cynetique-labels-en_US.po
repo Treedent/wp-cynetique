@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cynetique Cryostem\n"
+"Report-Msgid-Bugs-To: regis.tedone@gmail.com\n"
+"POT-Creation-Date: 2017-01-19 00:47+0100\n"
+"PO-Revision-Date: 2017-01-19 00:48+0100\n"
+"Last-Translator: \n"
+"Language-Team: atcg-partners <regis.tedone@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _x;_e;__;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../cynetique.php:38
+msgid "Configuration"
+msgstr "Settings"
+
+#: ../cynetique.php:88
+msgid "Type de greffe"
+msgstr "Graft type"
+
+#: ../cynetique.php:89
+msgid "Veuillez sélectionner un type de greffe"
+msgstr "Select a type of transplantation"
+
+#: ../cynetique.php:91
+msgid "Donneur non apparenté (DV)"
+msgstr "Unrelated donor"
+
+#: ../cynetique.php:92 ../cynetique.php:115
+msgid "Géno-identique"
+msgstr "Matched related donor"
+
+#: ../cynetique.php:93 ../cynetique.php:116
+msgid "Haplo-identique"
+msgstr "Mismatched related donor"
+
+#: ../cynetique.php:94
+msgid "Unité de sang placentaire (USP)"
+msgstr "Cord Blood Unit (CBU)"
+
+#: ../cynetique.php:114
+msgid "DV"
+msgstr "DV"
+
+#: ../cynetique.php:117
+msgid "USP"
+msgstr "CBU"
+
+#: ../cynetique.php:156 ../cynetique.php:162 ../cynetique.php:168
+#: ../cynetique.php:174 ../cynetique.php:180 ../cynetique.php:186
+#: ../cynetique.php:192 ../cynetique.php:198 ../cynetique.php:204
+msgid "N/D"
+msgstr "N/A"
+
+#: ../cynetique_settings.php:21
+msgid "Paramètres du serveur REST"
+msgstr "REST server configuration"
+
+#: ../cynetique_settings.php:28
+msgid "Url du serveur"
+msgstr "Server URL"
+
+#: ../cynetique_settings.php:36
+msgid "Client ID"
+msgstr "ID client"
+
+#: ../cynetique_settings.php:44
+msgid "Client Secret"
+msgstr "Mot de passe client"
+
+#: ../cynetique_settings.php:74
+msgid "Veuillez saisir ici les paramètres du serveur de données Cryostem"
+msgstr "Please, select Cryostem data server parameters here"

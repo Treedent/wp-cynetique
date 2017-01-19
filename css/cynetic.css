@@ -1,0 +1,15 @@
+/**
+ * Created by Regis TEDONE.
+ * atcg-partners.
+ * Date: 14/01/17
+ * Time: 13:09
+ */
+#type_selector_form label {
+    padding: 20px 20px 20px 0px;
+}
+#type_selector_form label:hover {
+    cursor: pointer;
+}
+.svgText {
+    pointer-events: none;
+}

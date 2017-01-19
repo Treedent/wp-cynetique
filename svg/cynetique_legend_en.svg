@@ -1,0 +1,188 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="1170px" height="167px" viewBox="0 0 1170 167" style="enable-background:new 0 0 1170 167;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2C292D;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:"FontAwesome";}
+	.st4{font-size:13px;}
+	.st5{font-family:"Helvetica 55 Roman";}
+	.st6{font-size:12px;}
+</style>
+	<rect
+     class="st0"
+     width="1170"
+     height="167"
+     id="rect5"
+     x="0"
+     y="-5.2702703"
+     style="fill:#2c292d" /><text
+     class="st2 st3 st4"
+     id="text7"
+     x="27.622"
+     y="55.649101"
+     style="font-size:13px;font-family:FontAwesome;fill:#ffffff"></text>
+<path
+     class="st2"
+     d="M 45.5,65.4 43,68.3 c -0.2,-0.2 -0.6,-0.1 -0.8,0.1 l -1,1.2 c -0.4,-0.1 -0.9,0 -1.2,0.4 l -7.8,8.8 -0.7,-0.6 c -0.1,-0.1 -0.4,-0.1 -0.5,0 -0.1,0.1 -0.1,0.4 0,0.5 l 1.2,1 -2.3,2.6 -0.5,-0.4 c -0.1,-0.1 -0.4,-0.1 -0.5,0 -0.1,0.1 -0.1,0.4 0,0.5 l 2,1.8 c 0.1,0.1 0.4,0.1 0.5,0 0.1,-0.1 0.1,-0.4 0,-0.5 l -0.5,-0.4 2.3,-2.6 1.2,1 c 0.1,0.1 0.4,0.1 0.5,0 0.1,-0.1 0.1,-0.4 0,-0.5 L 34.2,80.6 42,71.8 c 0.3,-0.4 0.4,-0.8 0.2,-1.2 l 1,-1.2 c 0.2,-0.2 0.2,-0.5 0,-0.7 l 2.5,-2.8 c 0,0 0,-0.1 0,-0.2 -0.1,-0.3 -0.2,-0.3 -0.2,-0.3 z m -4,5.8 -3.9,4.4 -0.2,-0.2 3.8,-4.3 c 0.1,-0.1 0.1,-0.2 0,-0.2 -0.1,-0.1 -0.2,-0.1 -0.2,0 l -3.8,4.3 -0.6,-0.6 3.9,-4.4 c 0.3,-0.3 0.8,-0.3 1.1,-0.1 0.1,0.3 0.2,0.8 -0.1,1.1 z"
+     id="path9"
+     style="fill:#ffffff" /><text
+     transform="matrix(1 0 0 1 84.055 33.5684)"
+     id="text11"><tspan
+       x="0"
+       y="0"
+       class="st2 st5 st6"
+       id="tspan13">Hematopoïetic Stem Cell Transplantation</tspan><tspan
+       x="0"
+       y="22"
+       class="st2 st5 st6"
+       id="tspan15">Email alert</tspan><tspan
+       x="0"
+       y="44"
+       class="st2 st5 st6"
+       id="tspan17">EDTA sampling</tspan><tspan
+       x="0"
+       y="66"
+       class="st2 st5 st6"
+       id="tspan19">Recipient</tspan><tspan
+       x="0"
+       y="88"
+       class="st2 st5 st6"
+       id="tspan21">Donor</tspan><tspan
+       x="0"
+       y="110"
+       class="st2 st5 st6"
+       id="tspan23">Cord Blood Unit</tspan></text>
+<text
+     transform="matrix(1 0 0 1 28.055 77.7284)"
+     id="text25"><tspan
+       x="0"
+       y="22"
+       class="st2 st5 st6"
+       font-weight="bold"
+       id="tspan27">R</tspan><tspan
+       x="0"
+       y="44"
+       class="st2 st5 st6"
+       font-weight="bold"
+       id="tspan29">D</tspan><tspan
+       x="0"
+       y="66"
+       class="st2 st5 st6 "
+       font-weight="bold"
+       id="tspan31">CBU</tspan></text>
+<text
+     id="text33"
+     x="405.68179"
+     y="33.568401"><tspan
+       x="405.68179"
+       y="33.568401"
+       class="st2 st5 st6"
+       id="tspan35"
+       style="font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">acute Graft-versus-Host Disease</tspan><tspan
+       x="405.68179"
+       y="55.568401"
+       class="st2 st5 st6"
+       id="tspan37"
+       style="font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">chronic Graft-versus-Host Disease</tspan><tspan
+       x="405.68179"
+       y="77.568398"
+       class="st2 st5 st6"
+       id="tspan39"
+       style="font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">Pre-transplant sampling</tspan><tspan
+       x="405.68179"
+       y="99.568398"
+       class="st2 st5 st6"
+       id="tspan41"
+       style="font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">Allograft day</tspan><tspan
+       x="405.68179"
+       y="121.5684"
+       class="st2 st5 st6"
+       id="tspan43"
+       style="font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">To 100 days of the allograft</tspan></text>
+<text
+     id="text45"
+     x="349.68179"
+     y="33.568199"><tspan
+       x="349.68179"
+       y="33.568199"
+       class="st2 st5 st6"
+       font-weight="bold"
+       id="tspan47"
+       style="font-weight:bold;font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">aGvHD</tspan><tspan
+       x="349.68179"
+       y="55.568199"
+       class="st2 st5 st6"
+       font-weight="bold"
+       id="tspan49"
+       style="font-weight:bold;font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">cGvHD</tspan><tspan
+       x="349.68179"
+       y="77.568199"
+       class="st2 st5 st6"
+       font-weight="bold"
+       id="tspan51"
+       style="font-weight:bold;font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">R0  D0</tspan><tspan
+       x="349.68179"
+       y="99.568199"
+       class="st2 st5 st6"
+       font-weight="bold"
+       id="tspan53"
+       style="font-weight:bold;font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">Day 0</tspan><tspan
+       x="349.68179"
+       y="121.5682"
+       class="st2 st5 st6"
+       font-weight="bold"
+       id="tspan55"
+       style="font-weight:bold;font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">Day 100</tspan></text>
+<text
+     id="text57"
+     x="704.89838"
+     y="33.568401"><tspan
+       x="704.89838"
+       y="33.568401"
+       class="st2 st5 st6"
+       id="tspan59"
+       style="font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">Sampling at the time of diagnosis before any treatment</tspan><tspan
+       x="704.89838"
+       y="55.568401"
+       class="st2 st5 st6"
+       id="tspan61"
+       style="font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">Sampling at X days after a1/c1</tspan><tspan
+       x="704.89838"
+       y="77.568398"
+       class="st2 st5 st6"
+       id="tspan63"
+       style="font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">Systematic sampling at X days from transplantation</tspan></text>
+<text
+     id="text65"
+     x="648.89893"
+     y="33.568199"><tspan
+       x="648.89893"
+       y="33.568199"
+       class="st2 st5 st6"
+       font-weight="bold"
+       id="tspan67"
+       style="font-weight:bold;font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">a1/c1</tspan><tspan
+       x="648.89893"
+       y="55.568199"
+       class="st2 st5 st6"
+       font-weight="bold"
+       id="tspan69"
+       style="font-weight:bold;font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">a2/c2</tspan><tspan
+       x="648.89893"
+       y="77.568199"
+       class="st2 st5 st6"
+       font-weight="bold"
+       id="tspan71"
+       style="font-weight:bold;font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">s1/s2/s3</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'Helvetica 55 Roman';-inkscape-font-specification:'Helvetica 55 Roman, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="24.223186"
+     y="34.499126"
+     id="text4205"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4207"
+       x="24.223186"
+       y="34.499126">HSCT</tspan></text>
+</svg>
