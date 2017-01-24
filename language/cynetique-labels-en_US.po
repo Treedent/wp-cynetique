@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cynetique Cryostem\n"
 "Report-Msgid-Bugs-To: regis.tedone@gmail.com\n"
-"POT-Creation-Date: 2017-01-19 00:47+0100\n"
-"PO-Revision-Date: 2017-01-19 00:48+0100\n"
+"POT-Creation-Date: 2017-01-24 17:47+0100\n"
+"PO-Revision-Date: 2017-01-24 17:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: atcg-partners <regis.tedone@gmail.com>\n"
 "Language: en_US\n"
@@ -18,45 +18,81 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../cynetique.php:38
+#: ../cynetique.php:43
 msgid "Configuration"
 msgstr "Settings"
 
-#: ../cynetique.php:88
-msgid "Type de greffe"
-msgstr "Graft type"
+#: ../cynetique.php:108
+msgid "VEUILLEZ SÉLECTIONNER UN TYPE DE GREFFE"
+msgstr "PLEASE SELECT A TYPE OF GRAFT"
 
-#: ../cynetique.php:89
-msgid "Veuillez sélectionner un type de greffe"
-msgstr "Select a type of transplantation"
-
-#: ../cynetique.php:91
+#: ../cynetique.php:110
 msgid "Donneur non apparenté (DV)"
 msgstr "Unrelated donor"
 
-#: ../cynetique.php:92 ../cynetique.php:115
+#: ../cynetique.php:111 ../cynetique.php:199
 msgid "Géno-identique"
 msgstr "Matched related donor"
 
-#: ../cynetique.php:93 ../cynetique.php:116
+#: ../cynetique.php:112 ../cynetique.php:200
 msgid "Haplo-identique"
 msgstr "Mismatched related donor"
 
-#: ../cynetique.php:94
+#: ../cynetique.php:113
 msgid "Unité de sang placentaire (USP)"
 msgstr "Cord Blood Unit (CBU)"
 
-#: ../cynetique.php:114
+#: ../cynetique.php:129
+msgid "BILAN DES PRÉLÈVEMENTS"
+msgstr "ASSESSMENT OF SAMPLES"
+
+#: ../cynetique.php:132 ../cynetique.php:158
+msgid "Au"
+msgstr "As of"
+
+#: ../cynetique.php:137 ../cynetique.php:162
+msgid "TOTAL"
+msgstr "TOTAL"
+
+#: ../cynetique.php:140
+msgid "Nombre de prélèvements"
+msgstr " Number of samples"
+
+#: ../cynetique.php:154
+msgid "BILAN DES RESSOURCES DISPONIBLES"
+msgstr "ASSESSMENT OF AVAILABLE RESOURCES"
+
+#: ../cynetique.php:165
+msgid "Nombre d'aliquots"
+msgstr "Number of aliquots"
+
+#: ../cynetique.php:180
+msgid "Plasma"
+msgstr "Plasma"
+
+#: ../cynetique.php:181
+msgid "Culot cellulaire"
+msgstr "Dried pellets"
+
+#: ../cynetique.php:182
+msgid "Cellules DMSO"
+msgstr "DMSO cells"
+
+#: ../cynetique.php:183
+msgid "ADN"
+msgstr "DNA"
+
+#: ../cynetique.php:198
 msgid "DV"
 msgstr "DV"
 
-#: ../cynetique.php:117
+#: ../cynetique.php:201
 msgid "USP"
 msgstr "CBU"
 
-#: ../cynetique.php:156 ../cynetique.php:162 ../cynetique.php:168
-#: ../cynetique.php:174 ../cynetique.php:180 ../cynetique.php:186
-#: ../cynetique.php:192 ../cynetique.php:198 ../cynetique.php:204
+#: ../cynetique.php:239 ../cynetique.php:245 ../cynetique.php:251
+#: ../cynetique.php:257 ../cynetique.php:263 ../cynetique.php:269
+#: ../cynetique.php:275 ../cynetique.php:281 ../cynetique.php:287
 msgid "N/D"
 msgstr "N/A"
 
@@ -79,3 +115,9 @@ msgstr "Mot de passe client"
 #: ../cynetique_settings.php:74
 msgid "Veuillez saisir ici les paramètres du serveur de données Cryostem"
 msgstr "Please, select Cryostem data server parameters here"
+
+#~ msgid "Type de greffe"
+#~ msgstr "Graft type"
+
+#~ msgid "Veuillez sélectionner un type de greffe"
+#~ msgstr "Select a type of transplantation"

@@ -13,3 +13,7 @@
 .svgText {
     pointer-events: none;
 }
+
+table tr:first-child {
+    text-transform:none !important;
+}

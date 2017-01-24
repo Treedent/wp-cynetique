@@ -60,7 +60,7 @@ j(document).ready(function () {
     //Popovers display events
     //************************
     j('#D0').on('mouseenter', function() {
-        j(this).attr( 'fill', '#2EAD6C' ).css( 'cursor', 'pointer' );
+        j(this).attr( 'fill', '#febc6c' ).css( 'cursor', 'pointer' );
     }).on('mouseleave', function() {
         j(this).attr( 'fill', '#F7A541' );
     }).webuiPopover({
@@ -75,7 +75,7 @@ j(document).ready(function () {
     });
 
     j('#R0').on('mouseenter', function() {
-        j(this).attr( 'fill', '#2EAD6C' ).css( 'cursor', 'pointer' );
+        j(this).attr( 'fill', '#febc6c' ).css( 'cursor', 'pointer' );
     }).on('mouseleave', function() {
         j(this).attr( 'fill', '#F7A541' );
     }).webuiPopover({
@@ -90,7 +90,7 @@ j(document).ready(function () {
     });
 
     j('#a1').on('mouseenter', function() {
-        j(this).attr( 'fill', '#930B07' ).css( 'cursor', 'pointer' );
+        j(this).attr( 'fill', '#0d8588' ).css( 'cursor', 'pointer' );
     }).on('mouseleave', function() {
         j(this).attr( 'fill', '#055759' );
     }).webuiPopover({
@@ -105,7 +105,7 @@ j(document).ready(function () {
     });
 
     j('#a2').on('mouseenter', function() {
-        j(this).attr( 'fill', '#930B07' ).css( 'cursor', 'pointer' );
+        j(this).attr( 'fill', '#0d8588' ).css( 'cursor', 'pointer' );
     }).on('mouseleave', function() {
         j(this).attr( 'fill', '#055759' );
     }).webuiPopover({
@@ -120,7 +120,7 @@ j(document).ready(function () {
     });
 
     j('#c1').on('mouseenter', function() {
-        j(this).attr( 'fill', '#930B07' ).css( 'cursor', 'pointer' );
+        j(this).attr( 'fill', '#0d8588' ).css( 'cursor', 'pointer' );
     }).on('mouseleave', function() {
         j(this).attr( 'fill', '#055759' );
     }).webuiPopover({
@@ -135,7 +135,7 @@ j(document).ready(function () {
     });
 
     j('#c2').on('mouseenter', function() {
-        j(this).attr( 'fill', '#930B07' ).css( 'cursor', 'pointer' );
+        j(this).attr( 'fill', '#0d8588' ).css( 'cursor', 'pointer' );
     }).on('mouseleave', function() {
         j(this).attr( 'fill', '#055759' );
     }).webuiPopover({
@@ -150,7 +150,7 @@ j(document).ready(function () {
     });
 
     j('#s1').on('mouseenter', function() {
-        j(this).attr( 'fill', '#FF6053' ).css( 'cursor', 'pointer' );
+        j(this).attr( 'fill', '#56d7e8' ).css( 'cursor', 'pointer' );
     }).on('mouseleave', function() {
         j(this).attr( 'fill', '#45BCCC' );
     }).webuiPopover({
@@ -165,7 +165,7 @@ j(document).ready(function () {
     });
 
     j('#s2').on('mouseenter', function() {
-        j(this).attr( 'fill', '#FF6053' ).css( 'cursor', 'pointer' );
+        j(this).attr( 'fill', '#56d7e8' ).css( 'cursor', 'pointer' );
     }).on('mouseleave', function() {
         j(this).attr( 'fill', '#45BCCC' );
     }).webuiPopover({
@@ -180,7 +180,7 @@ j(document).ready(function () {
     });
 
     j('#s3').on('mouseenter', function() {
-        j(this).attr( 'fill', '#FF6053' ).css( 'cursor', 'pointer' );
+        j(this).attr( 'fill', '#56d7e8' ).css( 'cursor', 'pointer' );
     }).on('mouseleave', function() {
         j(this).attr( 'fill', '#45BCCC' );
     }).webuiPopover({

@@ -1,55 +1,184 @@
-<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="1170px" height="147px" viewBox="0 0 1170 147" style="enable-background:new 0 0 1170 147;" xml:space="preserve">
-<style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xml:space="preserve"
+   style="enable-background:new 0 0 1170 147;"
+   viewBox="0 0 1170 147"
+   height="147px"
+   width="1170px"
+   y="0px"
+   x="0px"
+   id="Calque_1"
+   version="1.1"><metadata
+     id="metadata75"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs73" /><style
+     id="style3"
+     type="text/css">
 	.st0{fill:#2C292D;}
 	.st2{fill:#FFFFFF;}
-	.st3{font-family:"FontAwesome";}
+	.st3{font-family:&quot;FontAwesome&quot;;}
 	.st4{font-size:13px;}
-	.st5{font-family:"Helvetica 55 Roman";}
+	.st5{font-family:&quot;Helvetica 55 Roman&quot;;}
 	.st6{font-size:12px;}
-</style>
-<rect class="st0" width="1170" height="147"/>
-<text transform="matrix(1 0 0 1 27.622 33.6491)" class="st2 st3 st4"></text>
-<path class="st2" d="M45.5,41.4L43,44.3c-0.2-0.2-0.6-0.1-0.8,0.1l-1,1.2c-0.4-0.1-0.9,0-1.2,0.4l-7.8,8.8l-0.7-0.6
-		c-0.1-0.1-0.4-0.1-0.5,0c-0.1,0.1-0.1,0.4,0,0.5l1.2,1l-2.3,2.6l-0.5-0.4c-0.1-0.1-0.4-0.1-0.5,0c-0.1,0.1-0.1,0.4,0,0.5l2,1.8
-		c0.1,0.1,0.4,0.1,0.5,0c0.1-0.1,0.1-0.4,0-0.5l-0.5-0.4l2.3-2.6l1.2,1c0.1,0.1,0.4,0.1,0.5,0c0.1-0.1,0.1-0.4,0-0.5l-0.7-0.6
-		l7.8-8.8c0.3-0.4,0.4-0.8,0.2-1.2l1-1.2c0.2-0.2,0.2-0.5,0-0.7l2.5-2.8c0,0,0-0.1,0-0.2C45.6,41.4,45.5,41.4,45.5,41.4z M41.5,47.2
-		l-3.9,4.4l-0.2-0.2l3.8-4.3c0.1-0.1,0.1-0.2,0-0.2c-0.1-0.1-0.2-0.1-0.2,0l-3.8,4.3l-0.6-0.6l3.9-4.4c0.3-0.3,0.8-0.3,1.1-0.1
-		C41.7,46.4,41.8,46.9,41.5,47.2z"/>
-<text transform="matrix(1 0 0 1 84.055 33.5684)">
-		<tspan x="0" y="0" class="st2 st5 st6">Alerte mail</tspan>
-		<tspan x="0" y="22" class="st2 st5 st6">Prélèvement EDTA</tspan>
-		<tspan x="0" y="44" class="st2 st5 st6">Receveur</tspan>
-		<tspan x="0" y="66" class="st2 st5 st6">Donneur</tspan>
-		<tspan x="0" y="88" class="st2 st5 st6">Unité de Sang Placentaire</tspan>
-</text>
-<text transform="matrix(1 0 0 1 28.055 77.7284)">
-		<tspan x="0" y="0" class="st2 st5 st6" font-weight="bold">R</tspan>
-		<tspan x="0" y="22" class="st2 st5 st6" font-weight="bold">D</tspan>
-		<tspan x="0" y="44" class="st2 st5 st6 " font-weight="bold">USP</tspan>
-</text>
-<text transform="matrix(1 0 0 1 359.6818 33.5684)">
-		<tspan x="0" y="0" class="st2 st5 st6">Maladie du greffon contre l’hôte aiguë</tspan>
-		<tspan x="0" y="22" class="st2 st5 st6">Maladie du greffon contre l’hôte chronique</tspan>
-		<tspan x="0" y="44" class="st2 st5 st6">Prélèvements pré-greffe</tspan>
-		<tspan x="0" y="66" class="st2 st5 st6">Jour de l’allogreffe</tspan>
-		<tspan x="0" y="88" class="st2 st5 st6">à 100 jours de l’allogreffe</tspan>
-</text>
-<text transform="matrix(1 0 0 1 303.6818 33.5682)">
-		<tspan x="0" y="0" class="st2 st5 st6" font-weight="bold">aGvHD</tspan>
-		<tspan x="0" y="22" class="st2 st5 st6" font-weight="bold">cGvHD</tspan>
-		<tspan x="0" y="44" class="st2 st5 st6" font-weight="bold">R0 et D0</tspan>
-		<tspan x="0" y="66" class="st2 st5 st6" font-weight="bold">J 0</tspan>
-		<tspan x="0" y="88" class="st2 st5 st6" font-weight="bold">J 100</tspan>
-</text>
-<text transform="matrix(1 0 0 1 682.8984 33.5684)">
-		<tspan x="0" y="0" class="st2 st5 st6">Prélèvements au diagnostic,avant tout traitement</tspan>
-		<tspan x="0" y="22" class="st2 st5 st6">Prélèvements à X jours après a1/c1</tspan>
-		<tspan x="0" y="44" class="st2 st5 st6">Prélèvements systématiques à X jours de la greffe</tspan>
-</text>
-<text transform="matrix(1 0 0 1 626.8989 33.5682)">
-		<tspan x="0" y="0" class="st2 st5 st6" font-weight="bold">a1/c1</tspan>
-		<tspan x="0" y="22" class="st2 st5 st6" font-weight="bold">a2/c2</tspan>
-		<tspan x="0" y="44" class="st2 st5 st6" font-weight="bold">s1/s2/s3</tspan>
-</text>
+</style><rect
+     id="rect5"
+     height="147"
+     width="1170"
+     class="st0" /><text
+     id="text7"
+     class="st2 st3 st4"
+     transform="matrix(1 0 0 1 27.622 33.6491)"></text>
+<path
+     id="path9"
+     d="M45.5,41.4L43,44.3c-0.2-0.2-0.6-0.1-0.8,0.1l-1,1.2c-0.4-0.1-0.9,0-1.2,0.4l-7.8,8.8l-0.7-0.6   c-0.1-0.1-0.4-0.1-0.5,0c-0.1,0.1-0.1,0.4,0,0.5l1.2,1l-2.3,2.6l-0.5-0.4c-0.1-0.1-0.4-0.1-0.5,0c-0.1,0.1-0.1,0.4,0,0.5l2,1.8   c0.1,0.1,0.4,0.1,0.5,0c0.1-0.1,0.1-0.4,0-0.5l-0.5-0.4l2.3-2.6l1.2,1c0.1,0.1,0.4,0.1,0.5,0c0.1-0.1,0.1-0.4,0-0.5l-0.7-0.6   l7.8-8.8c0.3-0.4,0.4-0.8,0.2-1.2l1-1.2c0.2-0.2,0.2-0.5,0-0.7l2.5-2.8c0,0,0-0.1,0-0.2C45.6,41.4,45.5,41.4,45.5,41.4z M41.5,47.2   l-3.9,4.4l-0.2-0.2l3.8-4.3c0.1-0.1,0.1-0.2,0-0.2c-0.1-0.1-0.2-0.1-0.2,0l-3.8,4.3l-0.6-0.6l3.9-4.4c0.3-0.3,0.8-0.3,1.1-0.1   C41.7,46.4,41.8,46.9,41.5,47.2z"
+     class="st2" /><text
+     id="text11"
+     transform="matrix(1 0 0 1 84.055 33.5684)"><tspan
+       id="tspan13"
+       class="st2 st5 st6"
+       y="0"
+       x="0">Alerte mail</tspan><tspan
+       id="tspan15"
+       class="st2 st5 st6"
+       y="22"
+       x="0">Prélèvement EDTA</tspan><tspan
+       id="tspan17"
+       class="st2 st5 st6"
+       y="44"
+       x="0">Receveur</tspan><tspan
+       id="tspan19"
+       class="st2 st5 st6"
+       y="66"
+       x="0">Donneur</tspan><tspan
+       id="tspan21"
+       class="st2 st5 st6"
+       y="88"
+       x="0">Unité de Sang Placentaire</tspan></text>
+<text
+     id="text23"
+     transform="matrix(1 0 0 1 28.055 77.7284)"><tspan
+       id="tspan25"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="0"
+       x="0">R</tspan><tspan
+       id="tspan27"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="22"
+       x="0">D</tspan><tspan
+       id="tspan29"
+       font-weight="bold"
+       class="st2 st5 st6 "
+       y="44"
+       x="0">USP</tspan></text>
+<text
+     id="text31"
+     transform="matrix(1 0 0 1 359.6818 33.5684)"><tspan
+       id="tspan33"
+       class="st2 st5 st6"
+       y="0"
+       x="0">Maladie du greffon contre l’hôte aiguë</tspan><tspan
+       id="tspan35"
+       class="st2 st5 st6"
+       y="22"
+       x="0">Maladie du greffon contre l’hôte chronique</tspan><tspan
+       id="tspan37"
+       class="st2 st5 st6"
+       y="44"
+       x="0">Prélèvements pré-greffe</tspan><tspan
+       id="tspan39"
+       class="st2 st5 st6"
+       y="66"
+       x="0">Jour de l’allogreffe</tspan><tspan
+       id="tspan41"
+       class="st2 st5 st6"
+       y="88"
+       x="0">à 100 jours de l’allogreffe</tspan></text>
+<text
+     id="text43"
+     transform="matrix(1 0 0 1 303.6818 33.5682)"><tspan
+       id="tspan45"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="0"
+       x="0">aGvHD</tspan><tspan
+       id="tspan47"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="22"
+       x="0">cGvHD</tspan><tspan
+       id="tspan49"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="44"
+       x="0">R0 et D0</tspan><tspan
+       id="tspan51"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="66"
+       x="0">J 0</tspan><tspan
+       id="tspan53"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="88"
+       x="0">J 100</tspan></text>
+<text
+     id="text55"
+     transform="matrix(1 0 0 1 682.8984 33.5684)"><tspan
+       id="tspan57"
+       class="st2 st5 st6"
+       y="0"
+       x="0">Prélèvements au diagnostic,avant tout traitement</tspan><tspan
+       id="tspan59"
+       class="st2 st5 st6"
+       y="22"
+       x="0">Prélèvements à X jours après a1/c1</tspan><tspan
+       id="tspan61"
+       class="st2 st5 st6"
+       y="44"
+       x="0">Prélèvements systématiques à X jours de la greffe</tspan></text>
+<text
+     id="text63"
+     transform="matrix(1 0 0 1 626.8989 33.5682)"><tspan
+       id="tspan65"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="0"
+       x="0">a1/c1</tspan><tspan
+       id="tspan67"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="22"
+       x="0">a2/c2</tspan><tspan
+       id="tspan69"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="44"
+       x="0">s1/s2/s3</tspan></text>
+<text
+     id="text63-9"
+     x="626.67621"
+     y="98.955513"><tspan
+       id="tspan65-3"
+       font-weight="bold"
+       class="st2 st5 st6"
+       y="98.955513"
+       x="626.67621"
+       style="font-weight:bold;font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff">N/D</tspan></text>
+<text
+     id="text55-0"
+     x="683.72565"
+     y="55.024651"><tspan
+       style="font-size:12px;font-family:'Helvetica 55 Roman';fill:#ffffff"
+       id="tspan61-0"
+       class="st2 st5 st6"
+       y="99.024643"
+       x="683.72565">Non Disponible</tspan></text>
 </svg>

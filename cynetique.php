@@ -90,8 +90,22 @@ function display_cynetic($attributes=[]) {
     $attributes = array_change_key_case((array)$attributes, CASE_LOWER);
     $lang = $attributes['lang'];
 
-    $content = '<hr /><h3>' . __( 'Type de greffe', 'cynetique-labels' ) . '</h3>';
-    $content .= __( 'Veuillez sélectionner un type de greffe', 'cynetique-labels' ) . '<br />';
+
+    $token = oauth2::determineToken();
+    $tube_number = oauth2::getData($token, 'tube_number');
+    $specimen_collection_number = oauth2::getData($token, 'specimen_collection_number');
+    $specimen_collection = [];
+    foreach($specimen_collection_number->data as $specimen) {
+        $specimen_collection[$specimen->VISIT_TYPE_NAME] = $specimen->SPECIMEN_COLLECTION_NUMBER;
+    }
+    // Sorting specimens
+    $specimen_order = ['D0', 'R0', 'a1', 'a2', 'c1', 'c2', 's1', 's2', 's3'];
+    uksort($specimen_collection, function($key1, $key2) use ($specimen_order) {
+        return (array_search($key1, $specimen_order) > array_search($key2, $specimen_order));
+    });
+
+
+    $content = '<hr /><h3>' . __( 'VEUILLEZ SÉLECTIONNER UN TYPE DE GREFFE', 'cynetique-labels' ) . '</h3><br />';
     $content .= '<form id="type_selector_form" autocomplete="off">';
     $content .= '<label id="graft1_label"><input name="type_greffe" id="graft1" data-id="1" checked type="radio"> '. __( 'Donneur non apparenté (DV)', 'cynetique-labels' ) .'</label>';
     $content .= '<label id="graft2_label"><input name="type_greffe" id="graft2" data-id="2" type="radio"> '. __( 'Géno-identique', 'cynetique-labels' ) .'</label>';
@@ -107,6 +121,67 @@ function display_cynetic($attributes=[]) {
     $content .= $svg_content;
     $content .= '<script>var restData={};</script>';
     $content .= '<div id="dataContainer"></div>';
+
+    $current_date = $lang =='fr' ? date('d/m/Y') : date('m/d/Y');
+
+    //BILAN DES PRÉLÈVEMENTS
+    $content .= '<br /><br />';
+    $content .= '<h3>' . __( 'BILAN DES PRÉLÈVEMENTS', 'cynetique-labels' ) . '</h3>';
+    $content .= '<table>';
+    $content .= '<tr>';
+    $content .= '<td>' . __( 'Au', 'cynetique-labels' ) . ' ' . $current_date . '</td>';
+
+    foreach($specimen_collection as $key=>$value) {
+        $content .= '<td>' . $key . '</td>';
+    }
+    $content .= '<td>' . __( 'TOTAL', 'cynetique-labels' ) . '</td>';
+    $content .= '</tr>';
+    $content .= '<tr>';
+    $content .= '<td>' . __( 'Nombre de prélèvements', 'cynetique-labels' ) . '</td>';
+    $total = 0;
+    foreach($specimen_collection as $value) {
+        $total += $value;
+        $content .= '<td>' . $value . '</td>';
+    }
+    $content .= '<td>' . $total . '</td>';
+    $content .= '</tr>';
+    $content .= '</tbody>';
+    $content .= '</table>';
+
+
+    //BILAN DES RESSOURCES DISPONIBLES
+    $content .= '<br /><br />';
+    $content .= '<h3>' . __( 'BILAN DES RESSOURCES DISPONIBLES', 'cynetique-labels' ) . '</h3>';
+    $content .= '<table>';
+    $content .= '<tbody>';
+    $content .= '<tr>';
+    $content .= '<td>' . __( 'Au', 'cynetique-labels' ) . ' ' . $current_date . '</td>';
+    foreach($tube_number->data as $tube) {
+        $content .= '<td>' . __( $tube->SA_TY_NA_1210592326, 'cynetique-labels' ) . '</td>';
+    }
+    $content .= '<td>' . __( 'TOTAL', 'cynetique-labels' ) . '</td>';
+    $content .= '</tr>';
+    $content .= '<tr>';
+    $content .= '<td>' . __( 'Nombre d\'aliquots', 'cynetique-labels' ) . '</td>';
+    $total = 0;
+    foreach($tube_number->data as $tube) {
+        $nb_tube = $tube->TUBE_NUMBER;
+        $total += $nb_tube;
+        $content .= '<td>' . $nb_tube . '</td>';
+    }
+    $content .= '<td>' . $total . '</td>';
+    $content .= '</tr>';
+    $content .= '</tbody>';
+    $content .= '</table>';
+
+    //$content .= '<hr /><pre>' . print_r($specimen_collection_number->data, true) . '</pre>';
+
+/*
+    $other_label1 =  __( 'Plasma', 'cynetique-labels' ) ;
+    $other_label2 =  __( 'Culot cellulaire', 'cynetique-labels' ) ;
+    $other_label3 =  __( 'Cellules DMSO', 'cynetique-labels' );
+    $other_label4 =  __( 'ADN', 'cynetique-labels' );
+*/
 
     return $content;
 }
@@ -127,7 +202,6 @@ function getRestData_callback() {
     ];
 
     $graftTypeId = intval( $_POST['graftTypeId'] );
-
     $token = oauth2::determineToken();
 
     //help
@@ -164,55 +238,55 @@ function getRestData_callback() {
     if(empty($sample_number_D0->data[0])) {
         $restData .= "restData.D0='<strong>D0 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( 'N/D', 'cynetique-labels' ) . "';";
     } else {
-        $restData .= "restData.D0='<strong>D0 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . $sample_number_D0->data[0]->SA_TY_NA_1210592326 . " : " . $sample_number_D0->data[0]->SAMPLE_NUMBER. "<br />" . $sample_number_D0->data[1]->SA_TY_NA_1210592326 . " : " . $sample_number_D0->data[1]->SAMPLE_NUMBER. "<br />" . $sample_number_D0->data[2]->SA_TY_NA_1210592326 . " : " . $sample_number_D0->data[2]->SAMPLE_NUMBER. "';";
+        $restData .= "restData.D0='<strong>D0 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( $sample_number_D0->data[0]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_D0->data[0]->SAMPLE_NUMBER. "<br />" . __( $sample_number_D0->data[1]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_D0->data[1]->SAMPLE_NUMBER. "<br />" . __( $sample_number_D0->data[2]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_D0->data[2]->SAMPLE_NUMBER. "';";
     }
 
     if(empty($sample_number_R0->data[0])) {
         $restData .= "restData.R0='<strong>R0 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( 'N/D', 'cynetique-labels' ) . "';";
     } else {
-        $restData .= "restData.R0='<strong>R0 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . $sample_number_R0->data[0]->SA_TY_NA_1210592326 . " : " . $sample_number_R0->data[0]->SAMPLE_NUMBER. "<br />" . $sample_number_R0->data[1]->SA_TY_NA_1210592326 . " : " . $sample_number_R0->data[1]->SAMPLE_NUMBER. "<br />" . $sample_number_R0->data[2]->SA_TY_NA_1210592326 . " : " . $sample_number_R0->data[2]->SAMPLE_NUMBER. "';";
+        $restData .= "restData.R0='<strong>R0 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( $sample_number_R0->data[0]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_R0->data[0]->SAMPLE_NUMBER. "<br />" . __( $sample_number_R0->data[1]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_R0->data[1]->SAMPLE_NUMBER. "<br />" . __( $sample_number_R0->data[2]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_R0->data[2]->SAMPLE_NUMBER. "';";
     }
 
     if(empty($sample_number_a1->data[0])) {
         $restData .= "restData.a1='<strong>a1 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( 'N/D', 'cynetique-labels' ) . "';";
     } else {
-        $restData .= "restData.a1='<strong>a1 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . $sample_number_a1->data[0]->SA_TY_NA_1210592326 . " : " . $sample_number_a1->data[0]->SAMPLE_NUMBER. "<br />" . $sample_number_a1->data[1]->SA_TY_NA_1210592326 . " : " . $sample_number_a1->data[1]->SAMPLE_NUMBER. "<br />" . $sample_number_a1->data[2]->SA_TY_NA_1210592326 . " : " . $sample_number_a1->data[2]->SAMPLE_NUMBER. "';";
+        $restData .= "restData.a1='<strong>a1 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( $sample_number_a1->data[0]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_a1->data[0]->SAMPLE_NUMBER. "<br />" . __( $sample_number_a1->data[1]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_a1->data[1]->SAMPLE_NUMBER. "<br />" . __( $sample_number_a1->data[2]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_a1->data[2]->SAMPLE_NUMBER. "';";
     }
 
     if(empty($sample_number_a2->data[0])) {
         $restData .= "restData.a2='<strong>a2 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( 'N/D', 'cynetique-labels' ) . "';";
     } else {
-        $restData .= "restData.a2='<strong>a2 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . $sample_number_a2->data[0]->SA_TY_NA_1210592326 . " : " . $sample_number_a2->data[0]->SAMPLE_NUMBER. "<br />" . $sample_number_a2->data[1]->SA_TY_NA_1210592326 . " : " . $sample_number_a2->data[1]->SAMPLE_NUMBER. "<br />" . $sample_number_a2->data[2]->SA_TY_NA_1210592326 . " : " . $sample_number_a2->data[2]->SAMPLE_NUMBER. "';";
+        $restData .= "restData.a2='<strong>a2 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( $sample_number_a2->data[0]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_a2->data[0]->SAMPLE_NUMBER. "<br />" . __( $sample_number_a2->data[1]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_a2->data[1]->SAMPLE_NUMBER. "<br />" . __( $sample_number_a2->data[2]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_a2->data[2]->SAMPLE_NUMBER. "';";
     }
 
     if(empty($sample_number_c1->data[0])) {
         $restData .= "restData.c1='<strong>c1 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( 'N/D', 'cynetique-labels' ) . "';";
     } else {
-        $restData .= "restData.c1='<strong>c1 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . $sample_number_c1->data[0]->SA_TY_NA_1210592326 . " : " . $sample_number_c1->data[0]->SAMPLE_NUMBER. "<br />" . $sample_number_c1->data[1]->SA_TY_NA_1210592326 . " : " . $sample_number_c1->data[1]->SAMPLE_NUMBER. "<br />" . $sample_number_c1->data[2]->SA_TY_NA_1210592326 . " : " . $sample_number_c1->data[2]->SAMPLE_NUMBER. "';";
+        $restData .= "restData.c1='<strong>c1 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( $sample_number_c1->data[0]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_c1->data[0]->SAMPLE_NUMBER. "<br />" . __( $sample_number_c1->data[1]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_c1->data[1]->SAMPLE_NUMBER. "<br />" . __( $sample_number_c1->data[2]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_c1->data[2]->SAMPLE_NUMBER. "';";
     }
 
     if(empty($sample_number_c2->data[0])) {
         $restData .= "restData.c2='<strong>c2 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( 'N/D', 'cynetique-labels' ) . "';";
     } else {
-        $restData .= "restData.c2='<strong>c2 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . $sample_number_c2->data[0]->SA_TY_NA_1210592326 . " : " . $sample_number_c2->data[0]->SAMPLE_NUMBER. "<br />" . $sample_number_c2->data[1]->SA_TY_NA_1210592326 . " : " . $sample_number_c2->data[1]->SAMPLE_NUMBER. "<br />" . $sample_number_c2->data[2]->SA_TY_NA_1210592326 . " : " . $sample_number_c2->data[2]->SAMPLE_NUMBER. "';";
+        $restData .= "restData.c2='<strong>c2 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( $sample_number_c2->data[0]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_c2->data[0]->SAMPLE_NUMBER. "<br />" . __( $sample_number_c2->data[1]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_c2->data[1]->SAMPLE_NUMBER. "<br />" . __( $sample_number_c2->data[2]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_c2->data[2]->SAMPLE_NUMBER. "';";
     }
 
     if(empty($sample_number_s1->data[0])) {
         $restData .= "restData.s1='<strong>s1 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( 'N/D', 'cynetique-labels' ) . "';";
     } else {
-        $restData .= "restData.s1='<strong>s1 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . $sample_number_s1->data[0]->SA_TY_NA_1210592326 . " : " . $sample_number_s1->data[0]->SAMPLE_NUMBER. "<br />" . $sample_number_s1->data[1]->SA_TY_NA_1210592326 . " : " . $sample_number_s1->data[1]->SAMPLE_NUMBER. "<br />" . $sample_number_s1->data[2]->SA_TY_NA_1210592326 . " : " . $sample_number_s1->data[2]->SAMPLE_NUMBER. "';";
+        $restData .= "restData.s1='<strong>s1 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( $sample_number_s1->data[0]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_s1->data[0]->SAMPLE_NUMBER. "<br />" . __( $sample_number_s1->data[1]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_s1->data[1]->SAMPLE_NUMBER. "<br />" . __( $sample_number_s1->data[2]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_s1->data[2]->SAMPLE_NUMBER. "';";
     }
 
     if(empty($sample_number_s2->data[0])) {
         $restData .= "restData.s2='<strong>s2 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( 'N/D', 'cynetique-labels' ) . "';";
     } else {
-        $restData .= "restData.s2='<strong>s2 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . $sample_number_s2->data[0]->SA_TY_NA_1210592326 . " : " . $sample_number_s2->data[0]->SAMPLE_NUMBER. "<br />" . $sample_number_s2->data[1]->SA_TY_NA_1210592326 . " : " . $sample_number_s2->data[1]->SAMPLE_NUMBER. "<br />" . $sample_number_s2->data[2]->SA_TY_NA_1210592326 . " : " . $sample_number_s2->data[2]->SAMPLE_NUMBER. "';";
+        $restData .= "restData.s2='<strong>s2 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( $sample_number_s2->data[0]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_s2->data[0]->SAMPLE_NUMBER. "<br />" . __( $sample_number_s2->data[1]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_s2->data[1]->SAMPLE_NUMBER. "<br />" . __( $sample_number_s2->data[2]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_s2->data[2]->SAMPLE_NUMBER. "';";
     }
 
     if(empty($sample_number_s3->data[0])) {
         $restData .= "restData.s3='<strong>s3 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( 'N/D', 'cynetique-labels' ) . "';";
     } else {
-        $restData .= "restData.s3='<strong>s3 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . $sample_number_s3->data[0]->SA_TY_NA_1210592326 . " : " . $sample_number_s3->data[0]->SAMPLE_NUMBER. "<br />" . $sample_number_s3->data[1]->SA_TY_NA_1210592326 . " : " . $sample_number_s3->data[1]->SAMPLE_NUMBER. "<br />" . $sample_number_s3->data[2]->SA_TY_NA_1210592326 . " : " . $sample_number_s3->data[2]->SAMPLE_NUMBER. "';";
+        $restData .= "restData.s3='<strong>s3 - " . $graftTypeLabels[$graftTypeId] . "</strong><hr />" . __( $sample_number_s3->data[0]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_s3->data[0]->SAMPLE_NUMBER. "<br />" . __( $sample_number_s3->data[1]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_s3->data[1]->SAMPLE_NUMBER. "<br />" . __( $sample_number_s3->data[2]->SA_TY_NA_1210592326, 'cynetique-labels' ) . " : " . $sample_number_s3->data[2]->SAMPLE_NUMBER. "';";
     }
 
     $restData .= "WebuiPopovers.updateContent('#D0',restData.D0);";
